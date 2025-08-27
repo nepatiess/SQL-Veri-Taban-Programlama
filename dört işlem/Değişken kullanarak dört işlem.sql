@@ -1,10 +1,11 @@
+--------------------DEÄÄ°ÅKEN KULLANARAK 4 Ä°ÅLEM------------------------------
 declare @sayi1 int, @sayi2 int, @toplam int,
 @fark int, @carpim int, @bolum int
 set @sayi1 = 16
 set @sayi2 = 4
 set @toplam = @sayi1 + @sayi2
 print 'Toplam: ' + cast(@toplam as varchar(2))
--- Çıktı: Toplam: 13 oldu
+-- Ã‡Ã½ktÃ½: Toplam: 13 oldu
 
 set @toplam=@sayi1+@sayi2
 set @fark=@sayi1-@sayi2
@@ -13,14 +14,14 @@ set @bolum=@sayi1/@sayi2
 
 print 'Toplam: ' + cast(@toplam as varchar(2))
 print 'Fark: ' + cast(@fark as varchar(2))
-print 'Çarpım: ' + cast(@carpim as varchar(2))
-print 'Bölüm: ' + cast(@bolum as varchar(2))
+print 'Ã‡arpÃ½m: ' + cast(@carpim as varchar(2))
+print 'BÃ¶lÃ¼m: ' + cast(@bolum as varchar(2))
 
 /*
 karesi
-küpü
+kÃ¼pÃ¼
 2x^2 +4x +5
-kökünü
+kÃ¶kÃ¼nÃ¼
 */
 
 declare @kare int, @kup int, @kok int
@@ -28,6 +29,7 @@ set @kare = @sayi1^2
 set @kup = @sayi2^3
 set @kok = SQRT(@sayi1)
 
-print '1. sayının karesi: ' + cast(@kare as varchar(2))
-print '2. sayının küpü: ' + cast(@kup as varchar(2))
-print '1. sayının karekökü: ' + cast(@kok as varchar(2))
+print '1. sayÃ½nÃ½n karesi: ' + cast(@kare as varchar(2))
+print '2. sayÃ½nÃ½n kÃ¼pÃ¼: ' + cast(@kup as varchar(2))
+
+print '1. sayÃ½nÃ½n karekÃ¶kÃ¼: ' + cast(@kok as varchar(2))
