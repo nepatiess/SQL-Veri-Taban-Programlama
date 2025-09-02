@@ -1,4 +1,4 @@
 /*-----------------  DROP ----------------------*/
 use okul
-drop table ogr -- ogr adýndaki tabloyu sildik
+drop table ogr -- ogr adÄ±ndaki tabloyu sildik
 
