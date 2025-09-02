@@ -1,56 +1,59 @@
 /*
----------------VERÝ TÝPLERÝ--------------------------
-*bigint --> 8 byte (tam sayý olarak kullanýlýr)
+---------------VERÄ° TÄ°PLERÄ°--------------------------
+*bigint --> 8 byte (tam sayÄ± olarak kullanÄ±lÄ±r)
 *binary --> max 8 (bin ) byte
 *bit --> true, false
-*char(10) --> sabit deðerler için kullanýlýr (mesela tc kimlik no 11 basamaklý)
-*varchar --> deðiþken deðerler için kullanýlýr. (ad,soyad gibi deðiþkenler)
-*date --> 3 byte gün, ay, yýl olarak
-*datetime --> 8 byte + saat (1753-9999 yýllarý arasý)
-*datetime2(7) --> saat + salise gibi daha ince süre
-*datetimeoffset(7) --> ülkelere göre deðiþen saatler için kulanýlýr
-*decimal --> +-10^28 deðer (ondalýklý kýsýmlar dahil) (numeric ile ayný)
-*float --> ondalýk sayýlar için
-*geography --> coðrafi veri tipleri için gps(global position system açýlýmý)
-*geometry --> geometrik deðer için kullanýlýr
-*hierarchyid --> kategori kullanacaðýmýz alanlarda kullanýlýr (elektronik --> bilgisayar/ telefon / beyaz eþya...
-bilgisayar --> masaüstü / dizüstü 
-masaüstü --> casper / acer ...
+*char(10) --> sabit deÄŸerler iÃ§in kullanÄ±lÄ±r (mesela tc kimlik no 11 basamaklÄ±)
+*varchar --> deÄŸiÅŸken deÄŸerler iÃ§in kullanÄ±lÄ±r. (ad,soyad gibi deÄŸiÅŸkenler)
+*date --> 3 byte gÃ¼n, ay, yÄ±l olarak
+*datetime --> 8 byte + saat (1753-9999 yÄ±llarÄ± arasÄ±)
+*datetime2(7) --> saat + salise gibi daha ince sÃ¼re
+*datetimeoffset(7) --> Ã¼lkelere gÃ¶re deÄŸiÅŸen saatler iÃ§in kulanÄ±lÄ±r
+*decimal --> +-10^28 deÄŸer (ondalÄ±klÄ± kÄ±sÄ±mlar dahil) (numeric ile aynÄ±)
+*float --> ondalÄ±k sayÄ±lar iÃ§in
+*geography --> coÄŸrafi veri tipleri iÃ§in gps(global position system aÃ§Ä±lÄ±mÄ±)
+*geometry --> geometrik deÄŸer iÃ§in kullanÄ±lÄ±r
+*hierarchyid --> kategori kullanacaÄŸÄ±mÄ±z alanlarda kullanÄ±lÄ±r (elektronik --> bilgisayar/ telefon / beyaz eÅŸya...
+bilgisayar --> masaÃ¼stÃ¼ / dizÃ¼stÃ¼ 
+masaÃ¼stÃ¼ --> casper / acer ...
 casper --> i5, i7....)
-*image --> resim için kullanýlýr (genelde resim yolu kaydediliyor. Resim daha çok yer kaplayabilir)
-*int --> tamsayý
-*money --> Para birimi için kullanýlýr
-*nchar(10) --> sabit uzunlukta 2 katý (n: yabancý diller için karakter kullanýlýr)
-*numeric --> decimal ile ayný
-*nvarchar(MAX) --> varchar'ýn 2 kayý (n harfi)
-*real --> Aritmetik iþlemler için kullanýlýr 8 byte yer kaplar (En büyük kesirli sayýlar için)
-*smalldatetime --> 1900-2079 yýllarý arasý için kullanýlýr	
-*smallint --> +-32 küçük sayý
-*smallmoney --> daha küçük money için kullanýlýr
-*sql_variant --> birden fazla veri tipleri için kullanýlýr
+*image --> resim iÃ§in kullanÄ±lÄ±r (genelde resim yolu kaydediliyor. Resim daha Ã§ok yer kaplayabilir)
+*int --> tamsayÄ±
+*money --> Para birimi iÃ§in kullanÄ±lÄ±r
+*nchar(10) --> sabit uzunlukta 2 katÄ± (n: yabancÄ± diller iÃ§in karakter kullanÄ±lÄ±r)
+*numeric --> decimal ile aynÄ±
+*nvarchar(MAX) --> varchar'Ä±n 2 kayÄ± (n harfi)
+*real --> Aritmetik iÅŸlemler iÃ§in kullanÄ±lÄ±r 8 byte yer kaplar (En bÃ¼yÃ¼k kesirli sayÄ±lar iÃ§in)
+*smalldatetime --> 1900-2079 yÄ±llarÄ± arasÄ± iÃ§in kullanÄ±lÄ±r	
+*smallint --> +-32 kÃ¼Ã§Ã¼k sayÄ±
+*smallmoney --> daha kÃ¼Ã§Ã¼k money iÃ§in kullanÄ±lÄ±r
+*sql_variant --> birden fazla veri tipleri iÃ§in kullanÄ±lÄ±r
 *text --> alfabetik
 *time(7) --> saat
-*timestamp --> belirli bir saat aralýðýndaki deðiþiklikleri göstermek için güncel kayýt denebilir
-*tinyint --> 0-256 arasý 
-*uniqueidentifier --> benzersiz tanýmlayýcý (16 byte) --> guid: uçak otobüs ulaþýmý için karýþýk numaralarýn olduðu 564883
-*varchar(50) --> deðiþken uzunluðu (en çok kullanacaðýmýz veri tipi)
+*timestamp --> belirli bir saat aralÄ±ÄŸÄ±ndaki deÄŸiÅŸiklikleri gÃ¶stermek iÃ§in gÃ¼ncel kayÄ±t denebilir
+*tinyint --> 0-256 arasÄ± 
+*uniqueidentifier --> benzersiz tanÄ±mlayÄ±cÄ± (16 byte) --> guid: uÃ§ak otobÃ¼s ulaÅŸÄ±mÄ± iÃ§in karÄ±ÅŸÄ±k numaralarÄ±n olduÄŸu 564883
+*varchar(50) --> deÄŸiÅŸken uzunluÄŸu (en Ã§ok kullanacaÄŸÄ±mÄ±z veri tipi)
 
 
 ---------------------------SQL KOD KOMUTLARI---------------------------------------------------------
-SQL Veri Ýþleme Dili (Data Manipulation Language - DML) 2.
-SELECT: Veri Seçmek
+SQL Veri Ä°ÅŸleme Dili (Data Manipulation Language - DML) 2.
+SELECT: Veri SeÃ§mek
 DELETE: Veri Silmek
-UPDATE: Veri Güncellemek
-INSERT: Veri Kaydetmek
+UPDATE: Veri GÃ¼ncellemek
+INSERT INTO: Veri Kaydetmek
 ---------------------------------------------------------------
-SQL Veri Tanýmlama Dili (Data Definition Language- DDL) 1.
-CREATE TABLE: Yeni bir tablo oluþturmak
-ALTER TABLE: Tabloda güncelleme yapmak
+SQL Veri TanÄ±mlama Dili (Data Definition Language- DDL) 1.
+CREATE TABLE: Yeni bir tablo oluÅŸturmak
+CREATE DATABASE: Yeni bir database oluÅŸturmak
+ALTER TABLE: Tabloda gÃ¼ncelleme yapmak
+ALTER DATABASE: Database'de gÃ¼ncelleme yapmak
 DROP TABLE: Tabloyu silmek
 ----------------------------------------------------------------------
-SQL Veri Kontrolü Dili (Data Control Language - DCL)
+SQL Veri KontrolÃ¼ Dili (Data Control Language - DCL)
 GRANT:
 DENY:
 REVOKE: 
+
 
 */
