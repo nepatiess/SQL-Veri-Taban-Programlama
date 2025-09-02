@@ -1,11 +1,11 @@
 --------------------- ORDER BY --------------------------------
 use kitaplik
-select * from Kitap order by KitapNo -- kitapların numarasına göre tabloyu sıraladı
+select * from Kitap order by KitapNo -- kitaplarÄ±n numarasÄ±na gÃ¶re tabloyu sÄ±raladÄ±
 
-select * from Kitap order by KitapAd -- kitapların adlarını alfabetik sıraya soktu
+select * from Kitap order by KitapAd -- kitaplarÄ±n adlarÄ±nÄ± alfabetik sÄ±raya soktu
 
 select * from Kitap order by KitapAd asc -- asc: ascending kelimesinden geliyor
--- a'dan z'ye sıraladı
+-- a'dan z'ye sÄ±raladÄ±
 
 select * from Kitap order by KitapAd desc -- desc: descending kelimesinden geliyor
--- z'den a'ya sıraladı
+-- z'den a'ya sÄ±raladÄ±
