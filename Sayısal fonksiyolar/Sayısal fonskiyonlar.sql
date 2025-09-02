@@ -1,26 +1,35 @@
---use kitaplik
-----select abs(KitapFiyat) as 'Kitap Fiyatları' from Kitap -- kitap fiyatları eğer 0dan küçükse abs ile mutlak değeri alınır ve yeni kitap fiyatları sütununda gösterilir.
+-----------SAYISAL FONSKÄ°YONLAR-------------
+/*
+MIN(): seÃ§ilen sÃ¼tundaki en kÃ¼Ã¼Ã§Ã¼k deÄŸeri dÃ¶ndÃ¼rÃ¼r
+MAX(): seÃ§ilen sÃ¼tundaki en bÃ¼yÃ¼k deÄŸeri dÃ¶ndÃ¼rÃ¼r
+COUNT(): satÄ±rdaki deÄŸerlerin tanesini dÃ¶ndÃ¼rÃ¼r
+SUM(): satÄ±rdaki deÄŸerlerin toplamÄ±nÄ± dÃ¶ndÃ¼rÃ¼r
+AVG(): satÄ±rdaki sayÄ±sal deÄŸerlerin ortalamasÄ±nÄ± dÃ¶ndÃ¼rÃ¼r
+
+*/
+use kitaplik
+select abs(KitapFiyat) as 'Kitap FiyatlarÄ±' from Kitap -- kitap fiyatlarÄ± eÄŸer 0dan kÃ¼Ã§Ã¼kse abs ile mutlak deÄŸeri alÄ±nÄ±r ve yeni kitap fiyatlarÄ± sÃ¼tununda gÃ¶sterilir.
  
---select CEILING(KitapFiyat) as 'Kitap Fiyatları', KitapFiyat, 
---FLOOR(KitapFiyat) as 'KitapFiyatları2' ,KitapAd from Kitap -- floor ile virgüllü sayıları aşağıya doğru sıraladık
+select CEILING(KitapFiyat) as 'Kitap FiyatlarÄ±', KitapFiyat, 
+FLOOR(KitapFiyat) as 'KitapFiyatlarÄ±2' ,KitapAd from Kitap -- floor ile virgÃ¼llÃ¼ sayÄ±larÄ± aÅŸaÄŸÄ±ya doÄŸru sÄ±raladÄ±k
 
---select KitapAd,KitapFiyat, ROUND(KitapFiyat,1) from Kitap -- round ile kitap fiyatındaki ondalıklı sayıların virgülden sonraki 2 değeri varsa 1e düşürdük.
+select KitapAd,KitapFiyat, ROUND(KitapFiyat,1) from Kitap -- round ile kitap fiyatÄ±ndaki ondalÄ±klÄ± sayÄ±larÄ±n virgÃ¼lden sonraki 2 deÄŸeri varsa 1e dÃ¼ÅŸÃ¼rdÃ¼k.
 
---select POWER(2,5) as 'Üs' -- üs alma
---select SQRT(620) as 'Karekök' -- karekök alma
+select POWER(2,5) as 'Ãœs' -- Ã¼s alma
+select SQRT(620) as 'KarekÃ¶k' -- karekÃ¶k alma
 
 ---------------TOPLAMA------------------------
 select * from Kitap  
-select SUM(convert(int,KitapFiyat)) as 'Fiyat Toplam', sum(convert(int,Vergi)) as 'Vergi Toplam' from Kitap -- bütün kitapların fiyatlarını ve vergilerini topladı ve toplam sütuna yazdırdı
--- varcharlar ile sum fonksiyonu yapılmaz bu yüzden varcharları öncesinde int veri tipine değiştirdik.
+select SUM(convert(int,KitapFiyat)) as 'Fiyat Toplam', sum(convert(int,Vergi)) as 'Vergi Toplam' from Kitap -- bÃ¼tÃ¼n kitaplarÄ±n fiyatlarÄ±nÄ± ve vergilerini topladÄ± ve toplam sÃ¼tuna yazdÄ±rdÄ±
+-- varcharlar ile sum fonksiyonu yapÄ±lmaz bu yÃ¼zden varcharlarÄ± Ã¶ncesinde int veri tipine deÄŸiÅŸtirdik.
 
 select KitapAd, KitapFiyat from Kitap where KitapFiyat>=15
 
-select KitapAd, KitapFiyat from Kitap where KitapTarih between '2016-01-01 00:00:00' and '2015-01-01 00:00:00' -- tarihleri arasındaki kitapların kitap adlarını ve kitap fiyatlarını tabloda göster.
+select KitapAd, KitapFiyat from Kitap where KitapTarih between '2016-01-01 00:00:00' and '2015-01-01 00:00:00' -- tarihleri arasÄ±ndaki kitaplarÄ±n kitap adlarÄ±nÄ± ve kitap fiyatlarÄ±nÄ± tabloda gÃ¶ster.
 
-select AVG(KitapFiyat) as 'ortalama' from Kitap -- kitap fiyatlarının ortalamasını alıp ortalama sütununa yazdırır.
+select AVG(KitapFiyat) as 'ortalama' from Kitap -- kitap fiyatlarÄ±nÄ±n ortalamasÄ±nÄ± alÄ±p ortalama sÃ¼tununa yazdÄ±rÄ±r.
 
-select MAX(KitapFiyat), MIN(KitapFiyat) from Kitap -- kitapların fiyatlarının minimumu ve maximimunu gösterir
+select MAX(KitapFiyat), MIN(KitapFiyat) from Kitap -- kitaplarÄ±n fiyatlarÄ±nÄ±n minimumu ve maximimunu gÃ¶sterir
 
-select COUNT(KitapAd) from Kitap -- kitap adlarının sayısını gösterir
+select COUNT(KitapAd) from Kitap -- kitap adlarÄ±nÄ±n sayÄ±sÄ±nÄ± gÃ¶sterir
 
