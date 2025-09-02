@@ -2,7 +2,7 @@
 declare @kitapsayi tinyint
 select @kitapsayi= count(KitapAdi) from kitap2
 print @kitapsayi
---kitap2 tablosundaki kitapların sayısını yazdırdık
+--kitap2 tablosundaki kitaplarÄ±n sayÄ±sÄ±nÄ± yazdÄ±rdÄ±k
 
 if(@kitapsayi<=5)
 begin
@@ -12,9 +12,9 @@ else
 begin
 print 'Yeterli Kitap: '+ cast(@kitapsayi as varchar(2))
 end
--- if else kullanarak kitap sayısı eğer 5ten küçükse yetersiz, eğer büyük veya eşitse yeterli mesajı yazdırdık
+-- if else kullanarak kitap sayÄ±sÄ± eÄŸer 5ten kÃ¼Ã§Ã¼kse yetersiz, eÄŸer bÃ¼yÃ¼k veya eÅŸitse yeterli mesajÄ± yazdÄ±rdÄ±k
 
---kitap 2 tablosundaki roman türündeki kitapların sayısını 3ten küçükse yetersiz, 3 ve 6 aralığındaysa (6 dahil) orta sayıda, else yeterli kitap mevcut mesajlarını yazdır
+--kitap 2 tablosundaki roman tÃ¼rÃ¼ndeki kitaplarÄ±n sayÄ±sÄ±nÄ± 3ten kÃ¼Ã§Ã¼kse yetersiz, 3 ve 6 aralÄ±ÄŸÄ±ndaysa (6 dahil) orta sayÄ±da, else yeterli kitap mevcut mesajlarÄ±nÄ± yazdÄ±r
 
 declare @tursayi tinyint
 select @tursayi = count(KitapAdi) from kitap2
@@ -25,7 +25,7 @@ print 'Yetersiz roman: '+ cast(@tursayi as varchar(2))
 end
 else if(3<@tursayi and @tursayi<=6)
 begin
-print 'Orta sayıda kitap: '+ cast(@tursayi as varchar(2))
+print 'Orta sayÄ±da kitap: '+ cast(@tursayi as varchar(2))
 end
 else
 begin
