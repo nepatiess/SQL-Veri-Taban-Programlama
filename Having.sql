@@ -1,7 +1,7 @@
 --------------------------HAVING----------------------------
 
-select KitapYayýnEvi, COUNT(KitapAd) as 'Kitap Sayýsý',
+select KitapYayÃ½nEvi, COUNT(KitapAd) as 'Kitap SayÃ½sÃ½',
 SUM(convert(int,KitapFiyat)) as 'Alacak',
 SUM(convert(int,Vergi)) as 'Verecek',
 (SUM(convert(int,KitapFiyat))-SUM(convert(int,Vergi))) as 'Net Bakiye'
-from Kitap group by KitapYayýnEvi having (Sum(convert(int,KitapFiyat))- (SUM(convert(int,Vergi))))>15
+from Kitap group by KitapYayÃ½nEvi having (Sum(convert(int,KitapFiyat))- (SUM(convert(int,Vergi))))>15
