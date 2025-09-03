@@ -27,7 +27,7 @@
 select column1, column2,...
 from table_name
 ```
-
+- kitap1 tablosunu gösterdi.
 ```
 select * from kitap1
 ```
@@ -44,7 +44,7 @@ select column1, column2,...
 from table_name
 where condition;
 ```
-
+- kitap1 tablosundaki Nutuk kitabını gösterdi
 ```
 select * from kitap1
 where kitapAd = 'Nutuk';
@@ -66,7 +66,7 @@ order by kitapDerece asc
 select * from kitap3
 order by kitapDerece desc
 ```
--- order by birden fazla sütun
+- order by birden fazla sütun
 ```
 select * from kitap2
 order by KitapRenk, KitapPuan
@@ -78,6 +78,7 @@ order by KitapRenk asc, KitapOzet desc
 ```
 
 5. AND & OR & NOT
+- kitap 2 tablosundaki kitap türü roman ve kitap puanı 10 olan kitabı listeledi.
 ```
 select * from kitap2
 where KitapTur = 'Roman' AND KitapPuan = 10 
@@ -88,18 +89,39 @@ select column1, column2,....
 from table_name
 where not condition;
 ```
-
+- kitap 2 tablosundaki kitap türü roman olmayan kitapları listeledi.
 ```
 select * from kitap2
 where not KitapTur = 'Roman'
 ```
 
+- kitap 1 tablosundaki kitap sayfası 10'dan 100E kadar olmayan kitapları liseteledi.
 ```
 select * from kitap1
 where KitapSayfa not between 10 and 100
 ```
 
+- kitap 1 tablosundaki kitap adı 'A' harfi ile başlamayan kitapları listeledi.
 ```
 select * from kitap1
 where KitapAdi not like 'A%'
+```
+6. Insert into
+- kitap 3 tablosuna kitap rengi mor olan, kitap baskı 52 olan, kitap derecesi i olan kitabı ekledik.
+```
+insert into kitap3 (KitapRengi, KitapBaski, KitapDerece)
+values('Mor', 52, 'i')
+```
+
+7. NULL Values
+```is null
+select column_name
+from table_name
+where column_name is null;
+```
+
+```is not null
+select column_names
+from table_name
+where column_name is not null;
 ```
