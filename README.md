@@ -1,1 +1,4 @@
-# SQL-Veri-Taban-Programlama
+# SQL Veri Taban Programlama
+## Syntax
+------------------------
+1. 
