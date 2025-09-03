@@ -9,13 +9,26 @@
 ## Syntax
 
 1. SQL Statements
-- Sql Statmenets
    ```
    Select from * TabloAdi
    ```
-
+- Kitap 1 tablosunun tamamını görmek için
    ```
    select * from kitap1
    ```
+
+  | Commands | -------- |
+  | Select | veritabanından veri çekmek |
+  | Update | veritabanında veri güncellemek | 
+  | Delete | veritabanınndan veri silmek |
+  | Insert into | veritabanına yeni veri eklemek |
+  | Create database | yeni bir veritabanı oluşturmak |
+  | Alter database | veritabanını modifiye etmek |
+  | Create table | yeni bir tablo oluşturmak |
+  | Alter table | tabloyu modifiye etmek |
+  | Drop table | Tablo silmek |
+  | Create index | index oluşturmak |
+  | Drop index | index silmek | 
+
 
    
