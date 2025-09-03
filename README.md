@@ -17,7 +17,8 @@
    select * from kitap1
    ```
 
-  | Commands | -------- |
+  | Commands | Use for |
+  | -------- | ------- |
   | Select | veritabanından veri çekmek |
   | Update | veritabanında veri güncellemek | 
   | Delete | veritabanınndan veri silmek |
