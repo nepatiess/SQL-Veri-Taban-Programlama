@@ -11,8 +11,8 @@
 
 ## Syntax 
 
-| Komut | Ne için kullanılıyor  |
-|-------- | ------- |
+| Komut | Ne için kullanılıyor |
+| ----- | -------------------- |
 | Select | veritabanından veri çekmek |
 | Update | veritabanında veri güncellemek | 
 | Delete | veritabanınndan veri silmek |
