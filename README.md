@@ -426,5 +426,36 @@ where KitapTarih between '2025-02-01 00:00:00' and '2025-05-01 00:00:00'
 ---
 
 ### 19. Aliases (as) syntax
+````
+select column_name as 'alias_name'
+from table_name
+````
 
+- 'as' and ' opsiyonel:
+````
+select column_name alias_name
+from table_name
+````
 
+- kitap 1 tablosundaki kitapAdi sütunun ismini kitap adları olarak yazdırdık
+````
+select KitapAd as 'Kitap Adları'
+from kitap1
+````
+
+### 20.Join syntax
+
+| Joinler | Ne işe yarıyor |
+| ------------ | -------------- |
+| inner join | her iki tablodaki uyuşan değerleri döndürür |
+| left join | sol tabodaki bütün değerleri sağ tablodaki uyuşan değerler ile birlikte döndürür |
+| right join | sağ tablodaki bütün değerleir sol tablodaki uyşan değerler ile birlikte döndürür |
+| full outer join | her iki tablodaki uyuşan veya uyuşmayan bütün değerleri döndürür |
+
+- inner join
+````
+select column_name(s)
+from table1
+inner join table2
+on table1.column_name = table2.column_name
+````
