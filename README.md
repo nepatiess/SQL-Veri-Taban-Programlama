@@ -149,6 +149,8 @@ from kitap2
 where KitapOzet is null
 ```
 
+---
+
 8. Update syntax
 ```
 update table_name
@@ -162,6 +164,8 @@ update kitap2
 set KitapAd = 'Siyah Lale', KitapTur = 'Roman'
 where KitapPuan = 5
 ```
+
+---
 
 9. Delete syntax
 ```
@@ -177,6 +181,7 @@ delete from kitap2 where kitapPuan = 5
 ```
 delete from kitap3
 ```
+---
 
 10. Select Top syntax
 
@@ -185,7 +190,10 @@ delete from kitap3
 select top 5 * from kitap1
 ```
 
+---
+
 11. SQL Toplam Fonskiyonları
+
 | Fonksiyonlar | Ne işe yarıyor |
 | ------------ | -------------- |
 | MIN() | seçilen sütundaki en küçük değeri döndürür |
@@ -193,6 +201,8 @@ select top 5 * from kitap1
 | COUNT() | seçilen satırdaki verilerin toplam sayısını döndürür |
 | SUM() | seçilen sütundaki sayısal değerlerin toplamını döndürür |
 | AVG() | seçilen sütundaki sayısal değerlerin ortalamasını döndürür |
+
+---
 
 12. MIN & MAX syntax
 
@@ -214,3 +224,4 @@ select min(kitapFiyat) as SmallestPrice
 from kitap1
 ```
 
+---
