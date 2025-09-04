@@ -280,6 +280,8 @@ from kitap1
 group by kitapNo
 ```
 
+---
+
 ### 15. Avg syntax
 
 - Null değerler dikkate alınmıyor
@@ -423,6 +425,6 @@ where KitapTarih between '2025-02-01 00:00:00' and '2025-05-01 00:00:00'
 
 ---
 
-### 20. Aliases (as) syntax
+### 19. Aliases (as) syntax
 
 
