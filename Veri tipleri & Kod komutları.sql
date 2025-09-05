@@ -1,10 +1,11 @@
 /*
 ---------------VERİ TİPLERİ--------------------------
 *bigint --> 8 byte (tam sayı olarak kullanılır)
-*binary --> max 8 (bin ) byte
+*binary --> byte stings. default 1.
+*varbinary --> byte strings
 *bit --> true, false
-*char(10) --> sabit değerler için kullanılır (mesela tc kimlik no 11 basamaklı)
-*varchar --> değişken değerler için kullanılır. (ad,soyad gibi değişkenler)
+*blob --> [65,535]
+*char(10) --> sabit değerler için kullanılır (mesela tc kimlik no 11 basamaklı) [0-255]
 *date --> 3 byte gün, ay, yıl olarak
 *datetime --> 8 byte + saat (1753-9999 yılları arası)
 *datetime2(7) --> saat + salise gibi daha ince süre
@@ -32,8 +33,11 @@ casper --> i5, i7....)
 *time(7) --> saat
 *timestamp --> belirli bir saat aralığındaki değişiklikleri göstermek için güncel kayıt denebilir
 *tinyint --> 0-256 arası 
+*tinyblob --> max: [255]
+*tinytext --> max: [255]
 *uniqueidentifier --> benzersiz tanımlayıcı (16 byte) --> guid: uçak otobüs ulaşımı için karışık numaraların olduğu 564883
 *varchar(50) --> değişken uzunluğu (en çok kullanacağımız veri tipi)
+*varchar --> değişken değerler için kullanılır. (ad,soyad gibi değişkenler) [0-65535]
 
 
 ---------------------------SQL KOD KOMUTLARI---------------------------------------------------------
@@ -57,3 +61,4 @@ REVOKE:
 
 
 */
+
