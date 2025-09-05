@@ -452,10 +452,67 @@ from kitap1
 | right join | sağ tablodaki bütün değerleir sol tablodaki uyşan değerler ile birlikte döndürür |
 | full outer join | her iki tablodaki uyuşan veya uyuşmayan bütün değerleri döndürür |
 
-- inner join
+- inner join syntax
 ````
 select column_name(s)
 from table1
 inner join table2
 on table1.column_name = table2.column_name
+````
+
+- left join syntax
+````
+select column_name(s)
+from table1
+left join table2
+on table1.column_name = table2.column_name
+````
+
+- right join syntax
+````
+select column_name(s)
+from table1
+right join table2
+on table1.column_name = table2.column_name
+````
+
+- full join syntax
+````
+select column_name(s)
+from table1
+full outer join table2
+on table1.column_name = table2.column_name
+where condition;
+````
+
+- self join syntax
+```
+select column_name(s)
+from table1 t1, table2 t2
+where condition;
+```
+
+- union syntax
+````
+select column_name(s) from table1
+union
+select column_name(s) from table2
+````
+
+- union all syntax
+````
+select column_name(s) from table1
+union all 
+select column_name(s) from table2
+````
+
+---
+
+### 21.Group by syntax
+````
+select column_name(s)
+from table_name
+where condition
+group by column_name(s)
+order by column_name(s)
 ````
