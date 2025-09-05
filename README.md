@@ -516,3 +516,13 @@ where condition
 group by column_name(s)
 order by column_name(s)
 ````
+
+### 22.Having syntax
+````
+select column_name(s)
+from table_name
+where condition
+group by column_name(s)
+having condition
+order by column_name(s)
+````
