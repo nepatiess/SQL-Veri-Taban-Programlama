@@ -517,6 +517,8 @@ group by column_name(s)
 order by column_name(s)
 ````
 
+---
+
 ### 22.Having syntax
 ````
 select column_name(s)
