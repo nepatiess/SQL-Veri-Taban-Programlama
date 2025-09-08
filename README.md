@@ -443,6 +443,8 @@ select KitapAd as 'Kitap Adları'
 from kitap1
 ````
 
+---
+
 ### 20.Join syntax
 
 | Joinler | Ne işe yarıyor |
