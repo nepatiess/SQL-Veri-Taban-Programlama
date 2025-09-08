@@ -530,3 +530,96 @@ group by column_name(s)
 having condition
 order by column_name(s)
 ````
+
+---
+
+### 23. Exists syntax 
+````
+select column_name(s)
+from table_name
+where exists
+(select column_name from table_name where conditions)
+````
+
+---
+
+### 24. Any & All operators syntax
+````
+select column_name(s)
+from table_name
+where column_name operator any
+(select colun_name
+from table_name
+where consition);
+````
+
+- Any operator
+````
+- Kitap 1 tablosundaki kitap numarası 17 olan kitap, babalar ve oğulları kitabını listeledi
+select KitapAd from kitap1
+where KitapFiyat = any
+(select KitapFiyat
+from kitap1
+where KitapNo = 17)
+````
+
+---
+
+### 25.Select into syntax
+````
+select * into newtable{in externaldb] from oldtable where condition;
+````
+
+````
+-- table 1 tablosunu yeni oluşturulan yeniKitap1 tablosuna aktarmış olduk
+select * into yeniKitap1 from table1
+````
+
+---
+
+### 26. Insert into syntax
+````
+insert into table2
+select * form table1
+where condition;
+````
+
+````
+insert into table2 (column1, column2, column3,...)
+select column1, column2, column3,...
+from table1
+where condition;
+````
+
+---
+
+### 27. Case syntax
+````
+case
+when consdition1 then result1
+when consdition2 then result2
+when consdition3 then result3
+else result
+end;
+````
+
+````
+-- kitap 1 tablosundaki kitapların vergilerinin 5ten küçük, 5e eşit ya da 5ten büyük olup olmadığını case syntaxi ile listeleidk
+select Vergi,
+case
+	when Vergi < 5 then 'Vergi 5ten küçük'
+	when Vergi = 5 then 'Vergi 5e eşit'
+	when Vergi > 5 then 'Vergi 5ten büyük'
+	else 'Vergi null'.
+END as 'Vergi ne durumda? '
+from kitap1
+````
+
+---
+
+### 28. NULL Fonskiyonu syntax
+````
+-- kitap 1 tablosundaki kitaplaırn fiyatları ve vergileri ile birlikte kaç tl olduğunu listeledik.
+select KitapAd, (KitapFiyat + ISNULL(Vergi,2)) as 'Vergi ile toplam fiyat'
+from kitap1
+````
