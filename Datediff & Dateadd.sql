@@ -1,8 +1,9 @@
 --------------------DATE DIFF------------------------
---select DATEDIFF(Year,'1923-10-29','2016-10-29') as 'Yıl Farkı', -- Date diff fonksiyonu ile ilk tarih ile ikinci tarih arasında kaç yıl olduğunu gösterdi
---DATEDIFF(Month, '2016-01-05', '2016-12-01') as 'Ay Farkı', -- Date diff fonksiyonu ile ilk tarih ile ikinci tarih arasında kaç ay olduğunu gösterdi
---DATEDIFF(DAY, '2016-01-01','2016-12-01') as 'Gün Farkı' -- Date diff fonksiyonu ile ilk tarih ile ikinci tarih arasında kaç gün olduğunu gösterdi
+select DATEDIFF(Year,'1923-10-29','2016-10-29') as 'YÄ±l FarkÄ±', -- Date diff fonksiyonu ile ilk tarih ile ikinci tarih arasÄ±nda kaÃ§ yÄ±l olduÄŸunu gÃ¶sterdi
+DATEDIFF(Month, '2016-01-05', '2016-12-01') as 'Ay FarkÄ±', -- Date diff fonksiyonu ile ilk tarih ile ikinci tarih arasÄ±nda kaÃ§ ay olduÄŸunu gÃ¶sterdi
+DATEDIFF(DAY, '2016-01-01','2016-12-01') as 'GÃ¼n FarkÄ±' -- Date diff fonksiyonu ile ilk tarih ile ikinci tarih arasÄ±nda kaÃ§ gÃ¼n olduÄŸunu gÃ¶sterdi
 
-select DATEDIFF(YEAR,'1919-05-19', GETDATE()) as 'Kaç yıl oldu' -- MKA'nın Samsun'a çıkışı (Gençlik spor bay.) ndan 106 yıl geçmiş
+select DATEDIFF(YEAR,'1919-05-19', GETDATE()) as 'KaÃ§ yÄ±l oldu' -- MKA'nÄ±n Samsun'a Ã§Ä±kÄ±ÅŸÄ± (GenÃ§lik spor bay.) ndan 106 yÄ±l geÃ§miÅŸ
 
-select DATEADD(day,10,GETDATE()) --Bugünün üzerine 10 gün eklendi
+
+select DATEADD(day,10,GETDATE()) --BugÃ¼nÃ¼n Ã¼zerine 10 gÃ¼n eklendi
